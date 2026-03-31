@@ -1,5 +1,3 @@
-//admin.php
-
 <?php
 require 'config.php';
 

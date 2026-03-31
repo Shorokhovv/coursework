@@ -1,5 +1,3 @@
-//index.php
-
 <?php
 require 'config.php';
 $db = getDB();

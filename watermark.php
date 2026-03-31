@@ -1,4 +1,3 @@
-//watermark.php
 <?php
 require 'config.php';
 

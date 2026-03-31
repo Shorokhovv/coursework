@@ -1,5 +1,3 @@
-//config.php
-
 <?php
 session_start();
 
@@ -30,7 +28,7 @@ if (!is_dir(WATERMARKED_DIR)) mkdir(WATERMARKED_DIR, 0755, true);
 function getDB() {
     static $db = null;
     if ($db === null) {
-        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME); //!!!ТЕКУЩАЯ ПРОБЛЕМА: ПОДКЛЮЧЕНИЕ К БД
         if ($db->connect_error) {
             die("Ошибка подключения: " . $db->connect_error);
         }
