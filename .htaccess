@@ -1,0 +1,11 @@
+#Запрещаем прямой доступ к папкам uploads и watermarked
+RedirectMatch 403 ^/uploads/.*$
+RedirectMatch 403 ^/watermarked/.*$
+
+#Включаем кэширование для изображений (опционально)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+</IfModule>
